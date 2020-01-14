@@ -8,7 +8,7 @@ range.startContainer.parentElement.innerHTML = range
     .innerHTML
     .replace(range.startContainer.substringData(
         range.startOffset, range.endOffset - range.startOffset), 
-        ´<span style='background-color:yellow;'>${range.startContainer.substringData(range.startOffset, range.endOffset - range.startOffset)}</span>´
+        "<span style='background-color:yellow;'>" + range.startContainer.substringData(range.startOffset, range.endOffset - range.startOffset) + "</span>"
     )            
 
 // reemplazar el substring seleccionado 2
@@ -18,5 +18,5 @@ range.endContainer.parentElement.innerHTML = range
     .innerHTML
     .replace(range.endContainer.substringData(
         range.startOffset, range.endOffset - range.startOffset), 
-        ´<span style='background-color:yellow;'>${range.endContainer.substringData(range.startOffset, range.endOffset - range.startOffset)}</span>´
+        "<span style='background-color:yellow;'>" + range.endContainer.substringData(range.startOffset, range.endOffset - range.startOffset) + "</span>"
     )   
