@@ -2,9 +2,9 @@ selection = window.getSelection()
 range = selection.getRangeAt(0)
 
 // reemplazar el substring seleccionado 1 
-range.startContainer.parentElement.innerHTML = range
+range.startContainer.parentNode.innerHTML = range
     .startContainer
-    .parentElement
+    .parentNode
     .innerHTML
     .replace(range.startContainer.substringData(
         range.startOffset, range.endOffset - range.startOffset), 
@@ -12,9 +12,9 @@ range.startContainer.parentElement.innerHTML = range
     )            
 
 // reemplazar el substring seleccionado 2
-range.endContainer.parentElement.innerHTML = range
+range.endContainer.parentNode.innerHTML = range
     .endContainer
-    .parentElement
+    .parentNode
     .innerHTML
     .replace(range.endContainer.substringData(
         range.startOffset, range.endOffset - range.startOffset), 
