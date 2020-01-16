@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div id="div1">
+        Un div
+    </div>
+    <hr>
+    <div id="div2">
+        en el link
+        <a href="//">link</a> encontraras más información
+    </div>
+    <div id="div3">
+        en en link
+        <a href="//">link</a> encontraras más información
+    </div>
+
+    <button id="btn">PIN</button>
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            selection = window.getSelection()
+            range = selection.getRangeAt(0)
+            
+            var commonAncestorContainer = range.commonAncestorContainer;
+
+            // If commonAncestorContainer is a node type #text get parent
+            if (commonAncestorContainer.nodeType === 3) commonAncestorContainer = commonAncestorContainer.parentNode
+
+            console.group("commonAncestorContainer")
+                console.dir(commonAncestorContainer)
+            console.groupEnd()
+
+            // Get child nodes of common ancestor container
+            var childNodes = commonAncestorContainer.childNodes;
+
+            console.group("Child Nodes")
+                console.dir(childNodes)
+            console.groupEnd()
+
+            // Convert to array to filter
+            childNodes = Array.from(childNodes)
+
+            // Filter by nodes selected partially inside of commonAncestorContainer only
+            var nodesSelected = childNodes.filter( node => selection.containsNode(node) );
+
+            console.group("containsNode")
+
+                for (node of childNodes) {
+                    if (selection.containsNode(node)) {
+                        console.group("was selected totally")
+                            console.dir(node)
+                        console.groupEnd()
+                    } else if (selection.containsNode(node, true)) {
+                        console.group("was selected partially")
+                            console.dir(node)
+                        console.groupEnd()
+                    } else {
+                        console.group("was not selected")
+                            console.dir(node)
+                        console.groupEnd()
+                    }
+                }
+
+            console.groupEnd()    
+            console.group("Selected Nodes")
+                console.dir(nodesSelected)
+            console.groupEnd()
+        })
+    
+
+    </script>
+</body>
+</html>
