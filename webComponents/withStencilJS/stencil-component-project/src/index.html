@@ -7,8 +7,41 @@
 
     <script type="module" src="/build/stencil-component-project.esm.js"></script>
     <script nomodule src="/build/stencil-component-project.js"></script>
+    <style>
+      /* nav ol {
+        list-style: none;
+      }
+      body {
+        font-family: sans-serif;
+      } */
+      body {
+        background: #424B54;
+        font-family: sans-serif;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <my-tooltip text="Esto podria ayudarlo">?</my-tooltip>
+    <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
+    <!-- <my-sidebar title="Content"> -->
+      <!-- 
+        You can style the contents you pass in through slots from inside your 
+        component ONLY having access to the top level element, deeper tags you can styling outside:
+        in the light DOM
+      -->
+      <!-- <nav>
+        <ol>
+          <li>Item</li>
+          <li>Item 2</li>
+        </ol>
+      </nav>
+    </my-sidebar> -->
+    <!-- <script>
+      const sideBar = document.querySelector('my-sidebar');
+      setTimeout(() => {
+        sideBar.title = 'Main menu'
+      }, 3000)
+    </script> -->
   </body>
 </html>

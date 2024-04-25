@@ -20,6 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MySidebar {
+        "title": string;
+    }
+    interface MyTooltip {
+        "text": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +34,22 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMySidebarElement extends Components.MySidebar, HTMLStencilElement {
+    }
+    var HTMLMySidebarElement: {
+        prototype: HTMLMySidebarElement;
+        new (): HTMLMySidebarElement;
+    };
+    interface HTMLMyTooltipElement extends Components.MyTooltip, HTMLStencilElement {
+    }
+    var HTMLMyTooltipElement: {
+        prototype: HTMLMyTooltipElement;
+        new (): HTMLMyTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "my-sidebar": HTMLMySidebarElement;
+        "my-tooltip": HTMLMyTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +67,16 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MySidebar {
+        "title"?: string;
+    }
+    interface MyTooltip {
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "my-sidebar": MySidebar;
+        "my-tooltip": MyTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +84,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-sidebar": LocalJSX.MySidebar & JSXBase.HTMLAttributes<HTMLMySidebarElement>;
+            "my-tooltip": LocalJSX.MyTooltip & JSXBase.HTMLAttributes<HTMLMyTooltipElement>;
         }
     }
 }
