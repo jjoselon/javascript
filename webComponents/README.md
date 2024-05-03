@@ -1,0 +1,3 @@
+# Componentes web nativos
+- [What are Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [Shadow DOM vs Light DOM](https://www.google.com/search?sca_esv=5d0811d5ae0715ef&q=shadow+dom+vs+light+dom&uds=AMwkrPuKiz3kd7jHuta4ar-HNLVt1feLpztbsxupm21oCB9x8igD6S-LBcmq4kgsIkiETiPEWYIrpYo1wtRecnmFk_dXZBmhG_-gbCCJVkMnZFalEiI-kt09PVvYKzwV42z0PMZVEac5EzQHlA8uvp-D9nGL6r5ivhhJiXCW2SPAanUu6oqUolDjufVq_PwtAzjczphw18-Y-a9r9o4xsPY2RT78zPyoYGPKZ9w81fZZfYYdVdw8C4c843dMCXVxvsVZf-EPle95Hymyx114cTduu_Al1OVdug4fwKCM96_uZCVJFC7FkXtpSRKPj4dRh5MWM4J5iLUd&udm=2&prmd=ivsnmbtz&sa=X&ved=2ahUKEwjhlqHS3tiFAxURTDABHSzJDPwQtKgLegQIDBAB&biw=1818&bih=806&dpr=1#vhid=dAvpDsiFlRzBnM&vssid=mosaic)
